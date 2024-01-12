@@ -1,14 +1,11 @@
 const container = document.getElementById("container");
-for(let i = 1; i <= 16; i++) {
+for(let i = 1; i <= 256; i++) {
     const div = document.createElement("div");
-    div.style = "width: 10px; height: 10px";
+    div.style = "height: 50px; width: 50px;"
     container.appendChild(div);
-    for(let i = 1; i <= 16; i++) {
-        const divChild = document.createElement("div");
-        divChild.style = "width: 10px; height: 10px";
-        div.appendChild(divChild);
-    }
-    
+    div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = "blue";
+    })
 }
 
-container.style = "display: flex";
+container.style = "display: flex; flex-wrap: wrap;";
